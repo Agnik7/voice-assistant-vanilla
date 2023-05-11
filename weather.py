@@ -2,7 +2,7 @@ import requests
 import speech
 # Set your OpenWeatherMap API key and the city you want to get the weather for
 def forecast(city):        
-    api_key = '0c9664299581818626948eb4fb24b92d'
+    api_key = 'YOUR API KEY'
     # Set the API endpoint URL and parameters
     url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric'
 
