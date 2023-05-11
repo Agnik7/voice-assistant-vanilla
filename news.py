@@ -5,8 +5,8 @@ def headlines():
     # Set API endpoint and parameters
     url = 'https://newsapi.org/v2/top-headlines'
     params = {
-        'country': 'in',  # Set country parameter to US
-        'apiKey': '98109c5d509c42a19e4a4c6409df05cb'  # Replace with your NewsAPI API key
+        'country': 'in',  # Set country parameter to IN
+        'apiKey': 'YOUR API KEY'
     }
 
     # Send GET request to API endpoint
