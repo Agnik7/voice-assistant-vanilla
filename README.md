@@ -1,14 +1,5 @@
 # Voice-Assistant-Vanilla-Using-Python
 Vanilla is a simple voice assistant developed using Python. It takes your spoken command as input, and then tries to execute it.
-## Packages Required
-- `pyttsx3`
-- `SpeechRecognition`
-- `playsound==1.2.2`
-- `pyaudio`
-- `SpeechRecognition`
-- `subprocess`
-- `pywhatkit` 
-- `pyjokes`
 
 ## Features
 - Tells your Schedule
@@ -24,7 +15,7 @@ Vanilla is a simple voice assistant developed using Python. It takes your spoken
 ## How to run?
 - Clone this repository into your local device.
 - Open the Command Prompt/Terminal in this directory.
-- To download the packages, run `pip install -r requirements.txt` to install all the required packages and libraries.
+- Run `pip install -r requirements.txt` to install all the required packages and libraries.
 - Type `python main.py` and hit enter
 
 ## List of commands
@@ -71,4 +62,4 @@ The list of commands are as follows:
   4. **click a picture**
 
 ## Note:
-You need to add your own API keys to run certain features like fetching the news.
+You need to add your own API keys to run certain features like fetching the news and weather.
