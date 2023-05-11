@@ -13,6 +13,10 @@ MONTHS = ["january","february","march","april","may","june","july","august","sep
 DAYS = ["monday","tuesday", "wednesday", "thursday", "friday","saturday","sunday"]
 DAY_EXT = ["rd", "th", "st", "nd"]
 
+"""
+Look up the Google Calendar API and follow the steps to set it up
+"""
+
 def authenticate(): #Authenticating the user's Google Calendar using Calendar API.
     creds = None
     # The file token.json stores the user's access and refresh tokens, and is
