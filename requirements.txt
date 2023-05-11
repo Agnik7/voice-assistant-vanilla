@@ -6,3 +6,4 @@ SpeechRecognition
 pywhatkit
 pyjokes
 opencv-python
+google
