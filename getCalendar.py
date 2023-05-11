@@ -13,10 +13,7 @@ MONTHS = ["january","february","march","april","may","june","july","august","sep
 DAYS = ["monday","tuesday", "wednesday", "thursday", "friday","saturday","sunday"]
 DAY_EXT = ["rd", "th", "st", "nd"]
 
-def authenticate():
-    """Shows basic usage of the Google Calendar API.
-    Prints the start and name of the next 10 events on the user's calendar.
-    """
+def authenticate(): #Authenticating the user's Google Calendar using Calendar API.
     creds = None
     # The file token.json stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
@@ -37,7 +34,9 @@ def authenticate():
 
     service = build('calendar', 'v3', credentials=creds)
     return service
-def get_events(day, service):
+
+
+def get_events(day, service): #Accesses and tells the event the user has on the particular day
     date = datetime.datetime.combine(day, datetime.datetime.min.time())
     end_date = datetime.datetime.combine(day, datetime.datetime.max.time())
     utc = pytz.UTC
@@ -49,7 +48,6 @@ def get_events(day, service):
                                         orderBy='startTime').execute()
     events = events_result.get('items', [])
     
-    # NEW STUFF STARTS HERE
     if not events:
         speech.speech('No upcoming events found.')
     else:
