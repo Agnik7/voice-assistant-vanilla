@@ -5,3 +5,4 @@ pyaudio
 SpeechRecognition
 pywhatkit
 pyjokes
+opencv-python
