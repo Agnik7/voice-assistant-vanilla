@@ -36,15 +36,14 @@ WEATHER_STRS = ["what is the current weather at", "can you tell the present weat
 SOCIALS_STR = ["open socials", "i want to send a message", "let me see my social media"]
 JOKES_STRS = ["tell me some jokes", "say something funny", "make me laugh"]
 PICTURE_STRS = ["capture a pic", "take a picture", "click a pic", "click a picture"]
-VIDEO_STRS = ["record a video", "film a video", "record me"]
 while True:
     text = get_input()
     if "what is your name" in text:
             speech.speech("Hi! My name is Vanilla. Nice to meet you!!")
             speech.speech("I am a virtual voice assistant here to make your lives easier!")
             speech.speech("Say the word help if you want to find out what commands to say.")
-    HELP_STRS = [CALENDAR_STRS, NOTE_STRS, MUSIC_STRS, NEWS_STRS, SEARCH_STRS, WEATHER_STRS, SOCIALS_STR, JOKES_STRS, PICTURE_STRS, VIDEO_STRS]
-    TOPIC_STRS = ["to view your schedule", "to make a note", "to listen to music", "to get the news headlines", "to search anything in the internet", "to check the weather of any city", "to check your social media", "to listen to a joke", "to capture a picture", "to record a video"]
+    HELP_STRS = [CALENDAR_STRS, NOTE_STRS, MUSIC_STRS, NEWS_STRS, SEARCH_STRS, WEATHER_STRS, SOCIALS_STR, JOKES_STRS, PICTURE_STRS]
+    TOPIC_STRS = ["to view your schedule", "to make a note", "to listen to music", "to get the news headlines", "to search anything in the internet", "to check the weather of any city", "to check your social media", "to listen to a joke", "to capture a picture"]
     size = len(TOPIC_STRS)
     if "help" in text:
         speech.speech("Say vanilla to activate me")
@@ -145,14 +144,7 @@ while True:
                 capture_record.camera()
                 speech.speech("You can now view the captured picture in this folder only")
                 print("Listening...")
-        for phrase in VIDEO_STRS:
-            if phrase in text:
-                speech.speech("For how many seconds would you like to record?")
-                print("Listening...")
-                duration = int(get_input())
-                capture_record.record(duration)
-                speech.speech("You can now view the recorded video in the Pictures folder")
-                print("Listening...")
+        
         
     if  "goodbye" in text:
         speech.speech("Terminating")
