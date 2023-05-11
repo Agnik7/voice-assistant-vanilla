@@ -71,7 +71,7 @@ while True:
 
 
         
-        for phrase in CALENDAR_STRS:
+        for phrase in CALENDAR_STRS: #Helps get your schedule from Google Calendar
             if phrase in text:
                 date = getCalendar.date(text)
                 if date:
@@ -82,7 +82,7 @@ while True:
 
 
         
-        for phrase in NOTE_STRS:
+        for phrase in NOTE_STRS: # Helps save whatever you want to note down
             if phrase in text:
                 speech.speech("What would you like me to write down? ")
                 note = get_input()
@@ -91,7 +91,7 @@ while True:
 
         
 
-        for phrase in MUSIC_STRS:
+        for phrase in MUSIC_STRS: # Opens any song on YouTube
             if phrase in text:
                 speech.speech("What would you like to listen?")
                 print("Listening...")
@@ -99,13 +99,13 @@ while True:
                 music.play(song)
 
         
-        for phrase in NEWS_STRS:
+        for phrase in NEWS_STRS: # Reads you the headlines
             if phrase in text:
                 news.headlines()
                 print("Listening...")
         
         
-        for phrase in SEARCH_STRS:
+        for phrase in SEARCH_STRS: # Searches your query on the Internet
             if phrase in text:
                 speech.speech("What would you like me to search?")
                 print("Listening...")
@@ -113,14 +113,14 @@ while True:
                 search.find(query)
                 print("Listening...")
        
-        for phrase in WEATHER_STRS:
+        for phrase in WEATHER_STRS: # Tells the current weather of any city
             if phrase in text:
                 city = text.split(" ")[-1]
                 weather.forecast(city)
                 print("Listening...")
         
         SOCIAL_MEDIA = ["whatsapp", "instagram", "github", "linkedin", "medium"]
-        for phrase in SOCIALS_STR:
+        for phrase in SOCIALS_STR: # Opens your Socials
             if phrase in text:
                 speech.speech("What would you like to access? Choose from the following. 1. Whatsapp. 2. instagram. 3. Github. 4. LinkedIn. 5. Medium.")                
                 print("Listening...")
@@ -132,13 +132,13 @@ while True:
                     speech.speech("Sorry. I am not authorised to access this account")
                 print("Listening...")
         
-        for phrase in JOKES_STRS:
+        for phrase in JOKES_STRS: # Tells jokes
             if phrase in text:
                 joke = pyjokes.get_joke()
                 print(joke + "\n")
                 speech.speech(joke)                
                 print("Listening...")
-        for phrase in PICTURE_STRS:
+        for phrase in PICTURE_STRS: # Clicks pictures
             if phrase in text:
                 speech.speech("Clicking a picture now,")
                 capture_record.camera()
@@ -146,6 +146,6 @@ while True:
                 print("Listening...")
         
         
-    if  "goodbye" in text:
+    if  "goodbye" in text: # Terminating the program
         speech.speech("Terminating")
         break
