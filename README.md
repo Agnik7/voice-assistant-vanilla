@@ -15,7 +15,10 @@ Vanilla is a simple voice assistant developed using Python. It takes your spoken
 ## How to run?
 - Clone this repository into your local device.
 - Open the Command Prompt/Terminal in this directory.
-- Run `pip install -r requirements.txt` to install all the required packages and libraries.
+- Run the following command to install all the required packages and libraries:  
+```md 
+pip install -r requirements.txt
+```
 - Type `python main.py` and hit enter to run the voice assistant
 
 ## List of commands
